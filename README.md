@@ -1,4 +1,4 @@
 # tiradev
-Tietorakenteet ja algoritmit harkat
+** Tietorakenteet ja algoritmit harkat **
 
-Käytettävä kieli python
+[Viikkoraportti 1](https://pages.github.com/).
