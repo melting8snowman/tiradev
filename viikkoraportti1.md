@@ -5,4 +5,6 @@ Viikon aikana suoritettuja tehtäviä:
 * Asennettu ja päivitetty tietokoneen ohjelmistoja vastaamaan kurssin vaatimuksia. 
 * Initialisoitu github
 * Kirjoitettu viikkoraportti 1 
+
+
 aikaa käytetty 2 tuntia, vasta pääsemässä liikkeelle kurssin kanssa.
