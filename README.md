@@ -1,4 +1,6 @@
 # tiradev
 ** Tietorakenteet ja algoritmit harkat **
 
-[Viikkoraportti 1](https://pages.github.com/).
+[määrittelydokumentti](https://github.com/melting8snowman/tiradev/blob/main/määrittelydokumentti.md).
+
+[Viikkoraportti 1](https://github.com/melting8snowman/tiradev/blob/main/viikkoraportti1.md).
