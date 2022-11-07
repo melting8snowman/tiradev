@@ -1,4 +1,4 @@
-# Määrittelydokunentti tiradev
+# Määrittelydokumentti tiradev
 
 Tehtävissä käytettävä kieli on Python.
 Osaan myös Javaa, mutta mieluusti sen jo onnellisesti unohtaisin,
