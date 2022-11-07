@@ -7,4 +7,4 @@ Viikon aikana suoritettuja tehtäviä:
 * Kirjoitettu viikkoraportti 1 
 
 
-aikaa käytetty 2 tuntia, vasta pääsemässä liikkeelle kurssin kanssa.
+aikaa käytetty 3 tuntia, vasta pääsemässä liikkeelle kurssin kanssa.
