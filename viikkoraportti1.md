@@ -9,3 +9,6 @@ Viikon aikana suoritettuja tehtäviä:
 
 
 aikaa käytetty 3 tuntia, vasta pääsemässä liikkeelle kurssin kanssa.
+
+Teen tehtävät Pythonilla. Minulle on hieman epäselvää, että tarvitseeko minun tällöin myös luoda projekti? Luulisin, että se pakollinen vain Javalle tehtävissä töissä?
+
