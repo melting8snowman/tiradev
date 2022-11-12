@@ -11,7 +11,7 @@ https://github.com/denkspuren/BitboardC4/blob/master/BitboardDesign.md).
 * Tällöin pelilauda tarkistaminen on huomattavasti nopeampaa, tämä on tärkeää minimaxia ym pelin etenemistä ennustavia menetelmiä käytettäessä.
 
 
-* Aikaa käytetty 12 tuntia, mutta suurin osa tästä työstä on ollut, ellei nyt turhaa niin siitä ei jää paljonkaan jäljelle - paitsi oppimista..
+* Aikaa käytetty 12 tuntia, mutta suurin osa tästä työstä on ollut ellei nyt turhaa niin siitä ei jää paljonkaan jäljelle - paitsi oppimista..
 
 Teen tehtävät Pythonilla. Minulle on hieman epäselvää, että tarvitseeko minun tällöin myös luoda projekti? Luulisin, että se pakollinen vain Javalle tehtävissä töissä?
 
