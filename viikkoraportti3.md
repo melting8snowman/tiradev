@@ -1,8 +1,8 @@
-# Viikkoraportti 2
+# Viikkoraportti 3
 
 Viikon aikana suoritettuja tehtäviä:
 * Luettu kurssin dokumentaatiota ja muuta materiaalia.
-* tutkittu minimaxia ja muita peleissä hyödynnettäviä algoritmejä
+* tutkittu peleissä hyödynnettäviä algoritmejä
 * muokattu peiliauta ja peli tukemaan pythonin kirjastoa pygame ja binäärimuotoa pelintarkistuksessa, tässä käytetty hyväksi myös nettilähteitä  
 
 

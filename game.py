@@ -32,8 +32,7 @@ def winning_move(board, piece):
 			if board[r][c] == piece and board[r][c+1] == piece and board[r][c+2] == piece and board[r][c+3] == piece:
 				return True
 
-def is_valid_location(board, col):
-	return board[ROW_COUNT-1][col] == 0
+
 
 def open_row(board, col):
 	for r in range(ROW_COUNT):
@@ -46,17 +45,20 @@ def open_row(board, col):
 			if board[r][c] == piece and board[r+1][c] == piece and board[r+2][c] == piece and board[r+3][c] == piece:
 				return True
 
-	# Check positively sloped diaganols
+	# Check positive diag
 	for c in range(COLUMN_COUNT-3):
 		for r in range(ROW_COUNT-3):
 			if board[r][c] == piece and board[r+1][c+1] == piece and board[r+2][c+2] == piece and board[r+3][c+3] == piece:
 				return True
 
-	# Check negatively sloped diaganols
+	# Check negatively diag
 	for c in range(COLUMN_COUNT-3):
 		for r in range(3, ROW_COUNT):
 			if board[r][c] == piece and board[r-1][c+1] == piece and board[r-2][c+2] == piece and board[r-3][c+3] == piece:
 				return True
+
+def is_valid_location(board, col):
+	return board[ROW_COUNT-1][col] == 0
 
 def draw_board(board):
 	for c in range(COLUMN_COUNT):
@@ -122,12 +124,12 @@ while not game_over:
 					drop_piece(board, row, col, 1)
 
 					if winning_move(board, 1):
-						label = myfont.render("Player 1 wins!!", 1, RED)
+						label = myfont.render("Player One wins!!!!!", 1, RED)
 						screen.blit(label, (40,10))
 						game_over = True
 
 
-			# # Ask for Player 2 Input
+			#Player 2
 			else:				
 				posx = event.pos[0]
 				col = int(math.floor(posx/SQUARESIZE))
@@ -137,7 +139,7 @@ while not game_over:
 					drop_piece(board, row, col, 2)
 
 					if winning_move(board, 2):
-						label = myfont.render("Player 2 wins!!", 1, WHITE)
+						label = myfont.render("Player Two wins!!!!", 1, WHITE)
 						screen.blit(label, (40,10))
 						game_over = True
 
@@ -148,4 +150,4 @@ while not game_over:
 			turn = turn % 2
 
 			if game_over:
-				pygame.time.wait(3000)
+				pygame.time.wait(5000)
