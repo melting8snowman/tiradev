@@ -2,6 +2,7 @@ import numpy as np
 import sys
 import math
 import pygame
+import gameboard
 
 ROW_COUNT = 6
 COLUMN_COUNT = 7
@@ -31,11 +32,6 @@ def winning_move(board, piece):
         for r in range(ROW_COUNT):
             if board[r][c] == piece and board[r][c+1] == piece and board[r][c+2] == piece and board[r][c+3] == piece:
                 return True
-
-def open_row(board, col):
-    for r in range(ROW_COUNT):
-        if board[r][col] == 0:
-            return r
 
 
     for c in range(COLUMN_COUNT):
@@ -72,6 +68,11 @@ def draw_board(board):
                 pygame.draw.circle(screen, WHITE, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
     pygame.display.update()
 
+
+def open_row(board, col):
+    for r in range(ROW_COUNT):
+        if board[r][col] == 0:
+            return r
 
 board = board()
 print_board(board)
