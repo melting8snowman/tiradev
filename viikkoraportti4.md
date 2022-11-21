@@ -5,7 +5,7 @@ Viikon aikana suoritettuja tehtäviä:
 * tutkittu peleissä hyödynnettäviä algoritmejä
 * Pelin toiminnallisuudessa vielä hieman ongelmia, näiden selvittämistä alettu jatkamaan
 * aloitettu testaamisen suunnittelu ja rakentamine kunhna peli saadaan sellaiseen muotoon, että se on järkevää
-* jatketaan binäärimuotoa pelintarkistuksessa sekä koneoppimisen yhdistämistä peliin, tehdään tehokkuusvertailua
+* jatketaan binäärimuotoa pelintarkistuksessa sekä koneoppimisen yhdistämistä peliin, tehdään tehokkuusvertailua 
 
 
 * Aikaa käytetty ehkä  tuntia ja opittu paljon
