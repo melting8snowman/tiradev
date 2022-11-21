@@ -9,3 +9,5 @@ Kurssin tehtävän [määrittelydokumentti](https://github.com/melting8snowman/t
 
 [Viikkoraportti 3](https://github.com/melting8snowman/tiradev/blob/main/viikkoraportti3.md).
 
+[Viikkoraportti 4](https://github.com/melting8snowman/tiradev/blob/main/viikkoraportti4.md).
+
