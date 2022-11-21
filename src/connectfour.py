@@ -4,9 +4,6 @@ import math
 import pygame
 import gameboard
 
-ROW_COUNT = 6
-COLUMN_COUNT = 7
-
 
 BLUE = (0,0,255)
 BLACK = (0,0,0)
@@ -14,85 +11,41 @@ RED = (255,0,0)
 WHITE = (255,255,255)
 
 
-def board():
-    board = np.zeros((ROW_COUNT,COLUMN_COUNT))
-    return board
 
-def drop_piece(board, row, col, piece):
-    board[row][col] = piece
-
-
-
-def print_board(board):
-    print(np.flip(board, 0))
-
-def winning_move(board, piece):
-    # Check horizontal for win
-    for c in range(COLUMN_COUNT-3):
-        for r in range(ROW_COUNT):
-            if board[r][c] == piece and board[r][c+1] == piece and board[r][c+2] == piece and board[r][c+3] == piece:
-                return True
-
-    for c in range(COLUMN_COUNT):
-        for r in range(ROW_COUNT-3):
-            if board[r][c] == piece and board[r+1][c] == piece and board[r+2][c] == piece and board[r+3][c] == piece:
-                return True
-
-	# Check positive diagonal
-    for c in range(COLUMN_COUNT-3):
-        for r in range(ROW_COUNT-3):
-            if board[r][c] == piece and board[r+1][c+1] == piece and board[r+2][c+2] == piece and board[r+3][c+3] == piece:
-                return True
-
-    # Check negatively diagonal
-    for c in range(COLUMN_COUNT-3):
-        for r in range(3, ROW_COUNT):
-            if board[r][c] == piece and board[r-1][c+1] == piece and board[r-2][c+2] == piece and board[r-3][c+3] == piece:
-                return True
-
-def is_valid_location(board, col):
-    return board[ROW_COUNT-1][col] == 0
 
 def draw_board(board):
-    for c in range(COLUMN_COUNT):
-        for r in range(ROW_COUNT):
+    for c in range(board.COLUMN_COUNT):
+        for r in range(board.ROW_COUNT):
             pygame.draw.rect(screen, BLUE, (c*SQUARESIZE, r*SQUARESIZE+SQUARESIZE, SQUARESIZE, SQUARESIZE))
             pygame.draw.circle(screen, BLACK, (int(c*SQUARESIZE+SQUARESIZE/2), int(r*SQUARESIZE+SQUARESIZE+SQUARESIZE/2)), RADIUS)
 	
-    for c in range(COLUMN_COUNT):
-        for r in range(ROW_COUNT):		
-            if board[r][c] == 1:
+    for c in range(board.COLUMN_COUNT):
+        for r in range(board.ROW_COUNT):		
+            if board.get_item(r,c) == 1:
                 pygame.draw.circle(screen, RED, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
-            elif board[r][c] == 2: 
+            elif board.get_item(r,c) == 2: 
                 pygame.draw.circle(screen, WHITE, (int(c*SQUARESIZE+SQUARESIZE/2), height-int(r*SQUARESIZE+SQUARESIZE/2)), RADIUS)
     pygame.display.update()
 
-def open_row(board, col):
-    for r in range(ROW_COUNT):
-        if board[r][col] == 0:
-            return r
-
-board = board()
-print_board(board)
+#begin
+board = gameboard.gameboard()
+board.print_board()
 game_over = False
 turn = 0
 
 pygame.init()
 
 SQUARESIZE = 100
-
-width = COLUMN_COUNT * SQUARESIZE
-height = (ROW_COUNT+1) * SQUARESIZE
-
+width = board.COLUMN_COUNT * SQUARESIZE
+height = (board.ROW_COUNT+1) * SQUARESIZE
 size = (width, height)
-
 RADIUS = int(SQUARESIZE/2 - 5)
+myfont = pygame.font.SysFont("monospace", 70)
 
 screen = pygame.display.set_mode(size)
 draw_board(board)
 pygame.display.update()
 
-myfont = pygame.font.SysFont("monospace", 75)
 
 while not game_over:
 
@@ -116,11 +69,11 @@ while not game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/SQUARESIZE))
 
-                if is_valid_location(board, col):
-                    row = open_row(board, col)
-                    drop_piece(board, row, col, 1)
+                if board.is_valid_location(col):
+                    row = board.open_row(col)
+                    board.drop_piece(row, col, 1)
 
-                    if winning_move(board, 1):
+                    if board.winning_move(1):
                         label = myfont.render("Player One wins!!!!!", 1, RED)
                         screen.blit(label, (40,10))
                         game_over = True
@@ -131,17 +84,19 @@ while not game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/SQUARESIZE))
 
-                if is_valid_location(board, col):
-                    row = open_row(board, col)
-                    drop_piece(board, row, col, 2)
+                if board.is_valid_location(col):
+                    row = board.open_row(col)
+                    board.drop_piece(row, col, 2)
 
-                    if winning_move(board, 2):
+                    if board.winning_move(2):
                         label = myfont.render("Player Two wins!!!!", 1, WHITE)
                         screen.blit(label, (40,10))
                         game_over = True
 
-            print_board(board)
+            board.print_board()
+            board.add_move()
             draw_board(board)
+            pygame.display.update()
 
             turn += 1
             turn = turn % 2
