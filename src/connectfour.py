@@ -2,7 +2,7 @@ import numpy as np
 import sys
 import math
 import pygame
-import gameboard
+from gameboard import Gameboard
 
 
 BLUE = (0,0,255)
@@ -28,7 +28,7 @@ def draw_board(board):
     pygame.display.update()
 
 #begin
-board = gameboard.gameboard()
+board = Gameboard()
 board.print_board()
 game_over = False
 turn = 0
@@ -73,7 +73,7 @@ while not game_over:
                     row = board.open_row(col)
                     board.drop_piece(row, col, 1)
 
-                    if board.winning_move(1):
+                    if board.is_winning_move(1):
                         label = myfont.render("Player One wins!!!!!", 1, RED)
                         screen.blit(label, (40,10))
                         game_over = True
@@ -88,7 +88,7 @@ while not game_over:
                     row = board.open_row(col)
                     board.drop_piece(row, col, 2)
 
-                    if board.winning_move(2):
+                    if board.is_winning_move(2):
                         label = myfont.render("Player Two wins!!!!", 1, WHITE)
                         screen.blit(label, (40,10))
                         game_over = True

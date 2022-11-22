@@ -1,6 +1,6 @@
 import numpy as np
 
-class gameboard:
+class Gameboard:
     def __init__(self):
         self.ROW_COUNT = 6
         self.COLUMN_COUNT = 7
@@ -28,7 +28,7 @@ class gameboard:
         self.moves_played = self.moves_played +1
     
     
-    def winning_move(self, piece):
+    def is_winning_move(self, piece):
         # Check horizontal for win
         for c in range(self.COLUMN_COUNT-3):
             for r in range(self.ROW_COUNT):
