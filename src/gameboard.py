@@ -51,6 +51,7 @@ class Gameboard:
             for r in range(3, self.ROW_COUNT):
                 if self.board[r][c] == piece and self.board[r-1][c+1] == piece and self.board[r-2][c+2] == piece and self.board[r-3][c+3] == piece:
                     return True
+        return False
     
     
     def print_gameboard(self):
