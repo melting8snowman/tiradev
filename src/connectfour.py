@@ -9,6 +9,7 @@ BLUE = (0,0,255)
 BLACK = (0,0,0)
 RED = (255,0,0)
 WHITE = (255,255,255)
+YELLOW = (255,255,0)
 
 
 
@@ -50,6 +51,15 @@ pygame.display.update()
 while not game_over:
 
     for event in pygame.event.get():
+        if board.moves_played == 42:
+            label = myfont.render("Draw!!!!", 1, YELLOW)
+            screen.blit(label, (40,10))
+            game_over = True
+            pygame.display.update()
+            pygame.time.wait(5000)
+        else:
+            piece_dropped = False
+        
         if event.type == pygame.QUIT:
             sys.exit()
 
@@ -61,7 +71,7 @@ while not game_over:
             else: 
                 pygame.draw.circle(screen, WHITE, (position, int(square_size/2)), radius)
         pygame.display.update()
-
+        
         if event.type == pygame.MOUSEBUTTONDOWN:
             pygame.draw.rect(screen, BLACK, (0,0, width, square_size))
 
@@ -69,9 +79,14 @@ while not game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/square_size))
 
+                print("player1")
+                print("is valid location: ", board.is_valid_location(col))
+                print("open row:", board.open_row(col))
+
                 if board.is_valid_location(col):
                     row = board.open_row(col)
                     board.drop_piece(row, col, 1)
+                    piece_dropped = True
 
                     if board.is_winning_move(1):
                         label = myfont.render("Player One wins!!!!!", 1, RED)
@@ -84,9 +99,14 @@ while not game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/square_size))
 
+                print("player2")
+                print("is valid location: ", board.is_valid_location(col))
+                print("open row:", board.open_row(col))
+                
                 if board.is_valid_location(col):
                     row = board.open_row(col)
                     board.drop_piece(row, col, 2)
+                    piece_dropped = True
 
                     if board.is_winning_move(2):
                         label = myfont.render("Player Two wins!!!!", 1, WHITE)
@@ -94,12 +114,13 @@ while not game_over:
                         game_over = True
 
             board.print_board()
-            board.add_move()
             draw_board(board)
             pygame.display.update()
-
-            turn += 1
-            turn = turn % 2
+            
+            if piece_dropped == True:
+                board.add_move()
+                turn += 1
+                turn = turn % 2
 
             if game_over:
                 pygame.time.wait(5000)
