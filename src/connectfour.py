@@ -5,9 +5,11 @@ import pygame
 from gameboard import Gameboard
 from settings import Settings
 
+
 # initiate pygame and font
 pygame.init()
 pygame.font.init()
+
 
 # initiate gameboard and setup 
 settings = Settings(6,7,100)
@@ -51,7 +53,7 @@ while not board.game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/settings.square_size))
                 if board.is_valid_location(col):
-                    row = board.open_row(col)
+                    row = board.next_open_row(col)
                     board.drop_piece(row, col, 1)
                     piece_dropped = True
 
@@ -64,7 +66,7 @@ while not board.game_over:
                 position = event.pos[0]
                 col = int(math.floor(position/settings.square_size))              
                 if board.is_valid_location(col):
-                    row = board.open_row(col)
+                    row = board.next_open_row(col)
                     board.drop_piece(row, col, 2)
                     piece_dropped = True
 
