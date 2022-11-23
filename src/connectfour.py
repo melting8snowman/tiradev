@@ -5,10 +5,9 @@ import pygame
 from gameboard import Gameboard
 from settings import Settings
 
-# initiate
+# initiate pygame and font
 pygame.init()
 pygame.font.init()
-
 
 # initiate gameboard and setup 
 settings = Settings(6,7,100)
@@ -59,7 +58,6 @@ while not board.game_over:
                     if board.is_winning_move(1):
                         label = gamefont.render("Player One wins!!!!!", 1, settings.red)
                         screen.blit(label, (40,10))
-
 
             #Player 2
             else:				
