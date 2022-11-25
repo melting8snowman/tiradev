@@ -8,7 +8,7 @@ class TestSettings(unittest.TestCase):
     #    self.settings = Settings
 
     def test_created_settings_exists(self):
-        self.settings = Settings(6,7,100)
+        self.settings = Settings(6,7,4,100)
         self.assertNotEqual(self.settings, None)
     
    

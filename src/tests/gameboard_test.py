@@ -5,7 +5,7 @@ from settings import Settings
 
 class TestGameboard(unittest.TestCase):
     def setUp(self):
-        settings = Settings(6,7,100)
+        settings = Settings(6,7,4,100)
         self.gameboard = Gameboard(settings)
 
     def test_created_gameboard_exists(self):

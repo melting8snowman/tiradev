@@ -1,9 +1,10 @@
 import pygame
 
 class Settings:
-    def __init__(self, row_count, column_count, square_size):
+    def __init__(self, row_count, column_count, to_win, square_size):
         self.row_count = row_count
         self.column_count = column_count
+        self.to_win = to_win
         # set colours
         self.blue = (0,0,255)
         self.black = (0,0,0)

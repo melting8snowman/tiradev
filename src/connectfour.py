@@ -12,7 +12,7 @@ pygame.font.init()
 
 
 # initiate gameboard and setup 
-settings = Settings(6,7,100)
+settings = Settings(6,7,4,100)
 board = Gameboard(settings)
 gamefont = pygame.font.SysFont("monospace", 70)
 screen = pygame.display.set_mode(settings.size)
