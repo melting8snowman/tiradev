@@ -8,7 +8,7 @@ Viikon aikana suoritettuja tehtäviä:
 * jakautettu keskitetty koodisto loogisiin luokkiin
 * aloitettu tekoälyn ohjelmointi 
 * hahmoteltu pisteytystä pelitilanteille
-* testettu minimaxia
+* testattu minimaxia
 
 * Aikaa käytetty arviolta 25 tuntia ja opittu paljon
 
