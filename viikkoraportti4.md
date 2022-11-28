@@ -5,6 +5,7 @@ Viikon aikana suoritettuja tehtäviä:
 * tutkittu peleissä hyödynnettäviä algoritmejä
 * varmistettu pelin oikea toiminnallisuus, korjattu ongelmat
 * asennettu testaamiseen tarvittavat kirjastot ja rakennettu testejä 
+* jakautettu keskitetty koodisto loogisiin luokkiin
 * aloitettu tekoälyn ohjelmointi 
 * hahmoteltu pisteytystä pelitilanteille
 * testettu minimaxia
