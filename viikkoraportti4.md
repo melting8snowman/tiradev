@@ -9,6 +9,6 @@ Viikon aikana suoritettuja tehtäviä:
 * hahmoteltu pisteytystä pelitilanteille
 * testettu minimaxia
 
-* Aikaa käytetty ehkä 25 tuntia ja opittu paljon
+* Aikaa käytetty arviolta 25 tuntia ja opittu paljon
 
 
