@@ -31,7 +31,7 @@ while not board.game_over:
             pygame.display.update()
             pygame.time.wait(5000)
         else:
-            piece_dropped = False
+            token_dropped = False
         
         if event.type == pygame.QUIT:
             sys.exit()
@@ -54,8 +54,8 @@ while not board.game_over:
                 col = int(math.floor(position/settings.square_size))
                 if board.is_valid_location(col):
                     row = board.next_open_row(col)
-                    board.drop_piece(row, col, 1)
-                    piece_dropped = True
+                    board.drop_token(row, col, 1)
+                    token_dropped = True
 
                     if board.is_winning_move(1):
                         label = gamefont.render("Player One wins!!!!!", 1, settings.red)
@@ -67,8 +67,8 @@ while not board.game_over:
                 col = int(math.floor(position/settings.square_size))              
                 if board.is_valid_location(col):
                     row = board.next_open_row(col)
-                    board.drop_piece(row, col, 2)
-                    piece_dropped = True
+                    board.drop_token(row, col, 2)
+                    token_dropped = True
 
                     if board.is_winning_move(2):
                         label = gamefont.render("Player Two wins!!!!", 1, settings.white)
@@ -79,7 +79,7 @@ while not board.game_over:
             pygame.display.update()
             
             # toggle turn            
-            if piece_dropped == True:
+            if token_dropped == True:
                 board.add_move()
             
             # end game
