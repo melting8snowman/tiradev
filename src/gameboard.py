@@ -120,9 +120,9 @@ class Gameboard:
         center_count = center_pile.count(token)
         score += center_count * max((self.column_count - self.to_win),1)
         # next to center
-        #next_to_center_pile = [int(i) for i in list(self.board[:, (self.column_count//2+1)])]
-        #next_to_center_count = next_to_center_pile.count(token)    
-        #score += next_to_center_count * max((self.column_count - self.to_win - 1),0)
+        next_to_center_pile = [int(i) for i in list(self.board[:, (self.column_count//2+1)])]
+        next_to_center_count = next_to_center_pile.count(token)    
+        score += next_to_center_count * max((self.column_count - self.to_win - 1),0)
     
         # score horizontal
         for r in range(self.row_count):
