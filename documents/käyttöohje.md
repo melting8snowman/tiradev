@@ -6,9 +6,9 @@ Lataa projekti.
 
 Ennen kuin käynnistät ohjelman pitää asentaa riippuvuudet komennolla:
 
-**
+```bash
 poetry install
-**
+```
 
 Nyt ohjelman voi käynnistää komennolla
 
