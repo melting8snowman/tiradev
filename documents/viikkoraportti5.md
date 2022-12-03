@@ -9,6 +9,6 @@ Viikon aikana suoritettuja tehtäviä:
 * seuraavaksi pitää parantaa pisteytystä pelitilanteille
 * tutkia ohjelman tehokkuutta, nyt AI-vuorot kestävät hieman kauan
 
-* Aikaa käytetty arviolta 18 tuntia ja opittu paljon
+* Aikaa käytetty arviolta 22 tuntia ja opittu paljon
 
 
