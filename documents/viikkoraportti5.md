@@ -6,7 +6,9 @@ Viikon aikana suoritettuja tehtäviä:
 * asennettu testaamiseen tarvittavat kirjastot ja rakennettu testejä 
 * ohjelmoitu tekoälyä 
 * testattu tekoälyä ja korjattu virheitä, nyt ensimmäinen toimiva versio gitissä
-* seuraavaksi pitää parantaa pisteytystä pelitilanteille
+
+seuraavaksi pitää 
+* parantaa pisteytystä pelitilanteille
 * tutkia ohjelman tehokkuutta, nyt AI-vuorot kestävät hieman kauan
 
 * Aikaa käytetty arviolta 22 tuntia ja opittu paljon
