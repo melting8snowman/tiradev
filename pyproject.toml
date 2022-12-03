@@ -10,6 +10,7 @@ python = "^3.10"
 cowsay = "^5.0"
 numpy = "^1.23.5"
 pygame = "^2.1.2"
+invoke = "^1.7.3"
 
 
 [tool.poetry.group.dev.dependencies]
