@@ -3,20 +3,19 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python3 src/connectfour.py", pty=True)
+    ctx.run("python src/connectfour.py")
 
+@task
+def start3(ctx):
+    ctx.run("python3 src/connectfour.py")
 
 @task
 def test(ctx):
-    ctx.run("pytest src", pty=True)
-
+    ctx.run("pytest src")
 
 @task
 def lint(ctx):
-    ctx.run("pylint src", pty=True)
-
-
-
+    ctx.run("pylint src")
 
 @task
 def coverage(ctx):
