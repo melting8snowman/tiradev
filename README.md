@@ -3,6 +3,8 @@
 
 Kurssin tehtävän [määrittelydokumentti](https://github.com/melting8snowman/tiradev/blob/main/documents/määrittelydokumentti.md).
 
+Kurssin tehtävän [asennus- ja käyttöohje](https://github.com/melting8snowman/tiradev/blob/main/documents/käyttöohje.md).
+
 [Viikkoraportti 1](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti1.md).
 
 [Viikkoraportti 2](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti2.md).
