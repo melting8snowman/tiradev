@@ -14,3 +14,5 @@ Kurssin tehtävän [asennus- ja käyttöohje](https://github.com/melting8snowman
 [Viikkoraportti 4](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti4.md).
 
 [Viikkoraportti 5](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti5.md).
+
+[Viikkoraportti 6](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti6.md).
