@@ -3,14 +3,12 @@
 Viikon aikana suoritettuja tehtäviä:
 * Luettu kurssin dokumentaatiota ja muuta materiaalia.
 * tutkittu peleissä hyödynnettäviä algoritmejä
-* asennettu testaamiseen tarvittavat kirjastoja ja rakennettu testejä 
+* rakennettu puuttuvat testit
 * testattu tekoälyä sekä suunniteltu ja ohjelmoitu parannuksia 
+* testailtu sopivia keinoja käynnistää peli (2 pelaajaa tai AI) parhaiten
+* yritetty voittaa AI, mutta heikolla menestyksellä
 
-seuraavaksi jatketaan
-* testaamisen laajentaminen 
-* parantaa pisteytystä pelitilanteille
-* pyrkiä parantamaan tekoälyn tehokkuutta
 
-* Aikaa käytetty arviolta 10 tuntia ja opittu paljon
+* Aikaa käytetty arviolta 12 tuntia
 
 
