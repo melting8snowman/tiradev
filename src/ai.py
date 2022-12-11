@@ -12,7 +12,7 @@ class Ai:
 
     def minimax(self, board, depth, alpha, beta, max_player):
         # check for end game options
-        if board.is_winning_move(board.opponent): 
+        if board.is_winning_move(board.opponent):
                     # maximize
             return (None, 999999999)
         if board.is_winning_move(board.player):
