@@ -1,8 +1,5 @@
 import random
-#from itertools import cycle
 import numpy as np
-#import pygame
-#from settings import Settings
 
 
 class Gameboard:
@@ -15,7 +12,6 @@ class Gameboard:
         self.max_turns = self.row_count * self.column_count
         self.player = 1
         self.opponent = settings.opponent
-        #self.turn = random.randint(self.player, self.opponent)
         self.turn = 1
         self.game_over = False
 
@@ -52,8 +48,6 @@ class Gameboard:
 
     def add_move(self):
         self.moves_played = self.moves_played + 1
-        #self.turn += 1
-        #self.turn = self.turn % 2
         if self.turn == self.player:
             self.turn = self.opponent
         else:
@@ -63,25 +57,29 @@ class Gameboard:
         # Check horizontal for win
         for col in range(self.column_count-3):
             for row in range(self.row_count):
-                if self.board[row][col] == token and self.board[row][col+1] == token and self.board[row][col+2] == token and self.board[row][col+3] == token:
+                if self.board[row][col] == token and self.board[row][col+1] == token and \
+                    self.board[row][col+2] == token and self.board[row][col+3] == token:
                     self.game_over = True
                     return True
         # Check vertical
         for col in range(self.column_count):
             for row in range(self.row_count-3):
-                if self.board[row][col] == token and self.board[row+1][col] == token and self.board[row+2][col] == token and self.board[row+3][col] == token:
+                if self.board[row][col] == token and self.board[row+1][col] == token and \
+                    self.board[row+2][col] == token and self.board[row+3][col] == token:
                     self.game_over = True
                     return True
             # Check positive diagonal
         for col in range(self.column_count-3):
             for row in range(self.row_count-3):
-                if self.board[row][col] == token and self.board[row+1][col+1] == token and self.board[row+2][col+2] == token and self.board[row+3][col+3] == token:
+                if self.board[row][col] == token and self.board[row+1][col+1] == token and \
+                    self.board[row+2][col+2] == token and self.board[row+3][col+3] == token:
                     self.game_over = True
                     return True
         # Check reverse diagonal
         for col in range(self.column_count-3):
             for row in range(3, self.row_count):
-                if self.board[row][col] == token and self.board[row-1][col+1] == token and self.board[row-2][col+2] == token and self.board[row-3][col+3] == token:
+                if self.board[row][col] == token and self.board[row-1][col+1] == token and \
+                    self.board[row-2][col+2] == token and self.board[row-3][col+3] == token:
                     self.game_over = True
                     return True
         return False
@@ -108,7 +106,6 @@ class Gameboard:
                                        settings.height-int(row*settings.square_size+settings.square_size/2)), settings.radius)
 
     def is_final_node(self):
-        # return self.is_winning_move(self.board, self.player) or self.is_winning_move(self.board, self.opponent) or self.max_turns - self.moves_played == 0
         return self.is_winning_move(self.player) or self.is_winning_move(self.opponent) or self.max_turns - self.moves_played == 0
 
     def scoring(self, token):
@@ -118,12 +115,12 @@ class Gameboard:
         # these need to be evaluated on board position
         score = 0
 
-        # multiply center column score(s) as columns counting both ways
         # center
         center_pile = [int(i)
                        for i in list(self.board[:, self.column_count//2])]
         center_count = center_pile.count(token)
         score += center_count * max((self.column_count - self.to_win), 1)
+
         # next to center
         next_to_center_pile = [int(i) for i in list(
             self.board[:, (self.column_count//2+1)])]
