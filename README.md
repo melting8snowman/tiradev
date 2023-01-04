@@ -1,11 +1,12 @@
-# tiradev
+# ConnectFour-peli tiradev
 ** Tietorakenteet ja algoritmit harkat **
+
 
 Kurssin tehtävän [määrittelydokumentti](https://github.com/melting8snowman/tiradev/blob/main/documents/määrittelydokumentti.md).
 
-[testausdokumentti](https://github.com/melting8snowman/tiradev/blob/main/documents/testausdokumentti.md).
+[Testausdokumentti](https://github.com/melting8snowman/tiradev/blob/main/documents/testausdokumentti.md).
 
-Kurssin tehtävän [asennus- ja käyttöohje](https://github.com/melting8snowman/tiradev/blob/main/documents/käyttöohje.md).
+[Asennus- ja käyttöohje](https://github.com/melting8snowman/tiradev/blob/main/documents/käyttöohje.md).
 
 [Viikkoraportti 1](https://github.com/melting8snowman/tiradev/blob/main/documents/viikkoraportti1.md).
 
