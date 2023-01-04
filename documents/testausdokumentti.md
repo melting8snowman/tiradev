@@ -7,7 +7,7 @@ Ohjelmistoa testataan 50 testin verran ja niiden kattavuus toimintojen osalta on
 
 
 <p align="center">
-  <img src="tiradev_testaus.jpg" width="350" alt="testaus">
+  <img src="tiradev_testaus.jpg" width="500" alt="testaus">
 </p>
 
 Suurin osuus testeistä kohdistuu luokkaan Gameboard, sillä siihen sisätyvät pelin toimivuuden osalta olennaiset toiminnot. 
