@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa projekti.
+Lataa ja asenna projekti githubista, sen jälkeen voit käynnistää pelin omalta koneeltasi.
 
 ## Ohjelman käynnistäminen
 
@@ -23,6 +23,11 @@ mikäli koneesi asetuksista riippuen sinulla ei toimi pelkästään komento pyth
 poetry run invoke start3
 ```
 
+Voit myös käynnistää pelin ajamalla 
+```bash
+main.py
+```
+ohjelman hakemistosta src.
 
 ## Pelaaminen
 
