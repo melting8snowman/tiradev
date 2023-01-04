@@ -2,9 +2,11 @@
 
 Ohjelmistoa testataan 50 testin verran ja niiden kattavuus toimintojen osalta on coveragen mukaisesti on 100%
 
+
 <p align="center">
   <img src="tiradev_testaus.jpg" width="700" alt="testaus">
 </p>
+
 
 Suurin osuus testeistä kohdistuu luokkaan Gameboard, sillä siihen sisätyvät pelin toimivuuden osalta olennaiset toiminnot. 
 Siinä testataan pelilaudan ja pelin toimivuutta, kuten voittoisuuden tarkistaminen, pelimerkkien asettaminen, pelivuorot jne. 
