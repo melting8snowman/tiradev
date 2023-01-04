@@ -1,6 +1,6 @@
 # Testausdokumentti tiradev
 
-Ohjelmistoa testataan 50 testin verran ja niiden kattavuus toimintojen osalta on coveragen mukaisesti on 100%
+Ohjelmistoa testataan 50 testin verran ja niiden kattavuus toimintojen osalta on coveragen mukaisesti on 100%. Alla kuvaruutukaappaus coveragen testikattavuudesta.
 
 
 <p align="center">
