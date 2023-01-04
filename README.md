@@ -1,7 +1,7 @@
 # ConnectFour-peli tiradev
-**Tietorakenteet ja algoritmit harkat**
+**Tietorakenteet ja algoritmit harkat: ConnectFour-peli tekoälyllä.**
 
-ConnectFour-peli tekoälyllä.
+
 
 Kurssin tehtävän [määrittelydokumentti](https://github.com/melting8snowman/tiradev/blob/main/documents/määrittelydokumentti.md).
 
